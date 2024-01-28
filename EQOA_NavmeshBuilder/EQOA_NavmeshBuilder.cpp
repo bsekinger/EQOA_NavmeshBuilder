@@ -1,9 +1,8 @@
-// EQOA_NavmeshBuilder.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include "InputGeom.h"
 #include "EQOA_TileMesh.h"
+#include "EQOA_NavmeshBuilder.h"
+#include "Settings.h"
 
 rcContext contex;
 BuildContext ctx;
@@ -11,24 +10,32 @@ InputGeom inputGeom;
 
 int main()
 {
-    std::string filePath = "D:\\ESF-file-format\\Tunaria_FixOrigin\\Qeynos.obj";
-    std::string meshPath = "D:\\ESF-file-format\\Tunaria_FixOrigin\\Qeynos.bin";
-    const char* meshPathCString = meshPath.c_str();
-    bool loaded = inputGeom.load(&contex, filePath);
+    Settings& settingsInstance = Settings::getInstance();
+    std::string basePath = settingsInstance.Path;
 
-    if (!loaded)
-        return 1;
+    for (int i = settingsInstance.minFile; i <= settingsInstance.maxFile; ++i)
+    {
+        std::string objFile = basePath + std::to_string(i) + ".obj";
+        settingsInstance.meshFile = basePath + std::to_string(i) + ".bin";
+    
+        const char* meshPathCString = settingsInstance.meshFile.c_str();
+        bool loaded = inputGeom.load(&contex, objFile);
 
-    EQOA_TileMesh sample;
-    sample.setContext(&ctx);
-    sample.m_geom = &inputGeom;
-    sample.handleSettings();
+        if (!loaded)
+            return 1;
 
-    dtNavMesh* mesh = sample.handleBuild();
-    if (mesh == nullptr)
-        return 1;
+        EQOA_TileMesh sample;
+        sample.setContext(&ctx);
+        sample.m_geom = &inputGeom;
+        sample.handleSettings();
 
-    sample.saveAll(meshPathCString, mesh);
+        dtNavMesh* mesh = sample.handleBuild();
+        if (mesh == nullptr)
+            return 1;
+
+        sample.saveAll(meshPathCString, mesh);
+        delete mesh;
+    }
     return 0;
 }
 

@@ -26,7 +26,9 @@
 #include "DetourNavMesh.h"
 #include "DetourNavMeshQuery.h"
 #include "DetourCrowd.h"
+#include "D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\Settings.h"
 #include <iostream>
+
 //#include "imgui.h"
 //#include "SDL.h"
 //#include "SDL_opengl.h"
@@ -179,20 +181,21 @@ void Sample::collectSettings(BuildSettings& settings)
 
 void Sample::resetCommonSettings()
 {
-	m_cellSize = 0.25f;
-	m_cellHeight = 0.25f;
-	m_agentHeight = 2.0f;
-	m_agentRadius = 0.6f;
-	m_agentMaxClimb = 0.9f;
-	m_agentMaxSlope = 60.0f;
-	m_regionMinSize = 8;
-	m_regionMergeSize = 20;
-	m_edgeMaxLen = 12.0f;
-	m_edgeMaxError = 1.3f;
-	m_vertsPerPoly = 6.0f;
-	m_detailSampleDist = 6.0f;
-	m_detailSampleMaxError = 1.0f;
-	m_partitionType = SAMPLE_PARTITION_WATERSHED;
+    Settings& settingsInstance = Settings::getInstance();
+	m_cellSize = settingsInstance.cellSize;
+	m_cellHeight = settingsInstance.cellHeight;
+	m_agentHeight = settingsInstance.agentHeight;
+	m_agentRadius = settingsInstance.agentRadius;
+	m_agentMaxClimb = settingsInstance.agentMaxClimb;
+	m_agentMaxSlope = settingsInstance.agentMaxSlope;
+	m_regionMinSize = settingsInstance.regionMinSize;
+	m_regionMergeSize = settingsInstance.regionMergeSize;
+	m_edgeMaxLen = settingsInstance.edgeMaxLen;
+	m_edgeMaxError = settingsInstance.edgeMaxError;
+	m_vertsPerPoly = settingsInstance.vertsPerPoly;
+	m_detailSampleDist = settingsInstance.detailSampleDist;
+	m_detailSampleMaxError = settingsInstance.detailSampleMaxError;
+	m_partitionType = settingsInstance.partitionType;
 
 }
 

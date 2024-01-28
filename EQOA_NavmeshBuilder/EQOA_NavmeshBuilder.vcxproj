@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\RecastDemo\Contrib\SDL\include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\DetourCrowd\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\DetourTileCache\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\DebugUtils\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\RecastDemo\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\Recast\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\Detour\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\EQOA;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\RecastDemo\Contrib\SDL\include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\DetourCrowd\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\DetourTileCache\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\DebugUtils\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\RecastDemo\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\Recast\Include;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\Detour\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ChunkyTriMesh.cpp" />
+    <ClCompile Include="EQOA\ChunkyTriMesh.cpp" />
     <ClCompile Include="DebugUtils\Source\DebugDraw.cpp" />
     <ClCompile Include="DebugUtils\Source\DetourDebugDraw.cpp" />
     <ClCompile Include="DebugUtils\Source\RecastDebugDraw.cpp" />
@@ -152,9 +152,9 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\RecastDemo;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\Recast;D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\Detour;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ClCompile Include="EQOA_TileMesh.cpp" />
-    <ClCompile Include="InputGeom.cpp" />
-    <ClCompile Include="MeshLoaderObj.cpp" />
+    <ClCompile Include="EQOA\EQOA_TileMesh.cpp" />
+    <ClCompile Include="EQOA\InputGeom.cpp" />
+    <ClCompile Include="EQOA\MeshLoaderObj.cpp" />
     <ClCompile Include="Recast\Source\Recast.cpp" />
     <ClCompile Include="Recast\Source\RecastAlloc.cpp" />
     <ClCompile Include="Recast\Source\RecastArea.cpp" />
@@ -166,11 +166,11 @@
     <ClCompile Include="Recast\Source\RecastMeshDetail.cpp" />
     <ClCompile Include="Recast\Source\RecastRasterization.cpp" />
     <ClCompile Include="Recast\Source\RecastRegion.cpp" />
-    <ClCompile Include="Sample.cpp" />
-    <ClCompile Include="SampleInterfaces.cpp" />
+    <ClCompile Include="EQOA\Sample.cpp" />
+    <ClCompile Include="EQOA\SampleInterfaces.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ChunkyTriMesh.h" />
+    <ClInclude Include="EQOA\ChunkyTriMesh.h" />
     <ClInclude Include="DebugUtils\Include\DebugDraw.h" />
     <ClInclude Include="DebugUtils\Include\DetourDebugDraw.h" />
     <ClInclude Include="DebugUtils\Include\RecastDebugDraw.h" />
@@ -192,14 +192,16 @@
     <ClInclude Include="Detour\Include\DetourNavMeshQuery.h" />
     <ClInclude Include="Detour\Include\DetourNode.h" />
     <ClInclude Include="Detour\Include\DetourStatus.h" />
-    <ClInclude Include="InputGeom.h" />
-    <ClInclude Include="MeshLoaderObj.h" />
+    <ClInclude Include="EQOA_NavmeshBuilder.h" />
+    <ClInclude Include="EQOA\InputGeom.h" />
+    <ClInclude Include="EQOA\MeshLoaderObj.h" />
     <ClInclude Include="Recast\Include\Recast.h" />
     <ClInclude Include="Recast\Include\RecastAlloc.h" />
     <ClInclude Include="Recast\Include\RecastAssert.h" />
-    <ClInclude Include="EQOA_TileMesh.h" />
-    <ClInclude Include="Sample.h" />
-    <ClInclude Include="SampleInterfaces.h" />
+    <ClInclude Include="EQOA\EQOA_TileMesh.h" />
+    <ClInclude Include="EQOA\Sample.h" />
+    <ClInclude Include="EQOA\SampleInterfaces.h" />
+    <ClInclude Include="Settings.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

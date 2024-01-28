@@ -318,7 +318,8 @@ bool InputGeom::load(rcContext* ctx, const std::string& filepath)
 
 	if (extension == ".gset")
 		return loadGeomSet(ctx, filepath);
-	if (extension == ".obj")
+    if (extension == ".obj")
+        std::cout << ".obj file loaded: " << filepath << std::endl;
 		return loadMesh(ctx, filepath);
 
 	return false;
