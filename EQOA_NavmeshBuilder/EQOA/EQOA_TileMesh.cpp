@@ -69,7 +69,7 @@ EQOA_TileMesh::EQOA_TileMesh():
 	m_dmesh(0),
 	m_maxTiles(0),
 	m_maxPolysPerTile(0),
-	m_tileSize(400),
+	m_tileSize(200),
 	m_tileBuildTime(0),
 	m_tileMemUsage(0),
 	m_tileTriCount(0)
@@ -91,9 +91,9 @@ void EQOA_TileMesh::handleSettings()
 		const float* bmin = m_geom->getNavMeshBoundsMin();
 		const float* bmax = m_geom->getNavMeshBoundsMax();
 		rcCalcGridSize(bmin, bmax, m_cellSize, &gw, &gh);
-		const int ts = (int)m_tileSize;
-		const int tw = (gw + ts-1) / ts;
-		const int th = (gh + ts-1) / ts;
+        const int ts = (int)(m_tileSize);
+        const int tw = (gw + ts - 1) / ts;
+        const int th = (gh + ts - 1) / ts;
         std::cout << "Tiles:  " << tw << " X " << th << std::endl;
         std::cout << "Tile size:  " << m_tileSize << std::endl;
 
@@ -186,9 +186,9 @@ void EQOA_TileMesh::buildAllTiles()
 	const float* bmax = m_geom->getNavMeshBoundsMax();
 	int gw = 0, gh = 0;
 	rcCalcGridSize(bmin, bmax, m_cellSize, &gw, &gh);
-	const int ts = (int)m_tileSize;
-	const int tw = (gw + ts-1) / ts;
-	const int th = (gh + ts-1) / ts;
+    const int ts = (int)(m_tileSize);
+    const int tw = (gw + ts - 1) / ts;
+    const int th = (gh + ts - 1) / ts;
 	const float tcs = m_tileSize*m_cellSize;
 
 	
