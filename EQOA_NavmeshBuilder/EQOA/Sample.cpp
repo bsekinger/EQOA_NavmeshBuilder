@@ -26,7 +26,7 @@
 #include "DetourNavMesh.h"
 #include "DetourNavMeshQuery.h"
 #include "DetourCrowd.h"
-#include "D:\My Documents\Repos\EQOA_NavmeshBuilder\EQOA_NavmeshBuilder\Settings.h"
+#include "Settings.h"
 #include <iostream>
 
 //#include "imgui.h"

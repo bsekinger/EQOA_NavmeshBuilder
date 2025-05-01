@@ -208,7 +208,7 @@ void EQOA_TileMesh::buildAllTiles()
 			m_lastBuiltTileBmax[2] = bmin[2] + (y+1)*tcs;
 			
 			int dataSize = 0;
-            std::cout << "Building Tile: " << x << ", " << y << " | BoundsMin: " << m_lastBuiltTileBmin[0] << ", " << m_lastBuiltTileBmin[1] << ", " << m_lastBuiltTileBmin[2] << " | BoundsMax: " << m_lastBuiltTileBmax[0] << ", " << m_lastBuiltTileBmax[1] << ", " << m_lastBuiltTileBmax[2] << std::endl;
+            //std::cout << "Building Tile: " << x << ", " << y << " | BoundsMin: " << m_lastBuiltTileBmin[0] << ", " << m_lastBuiltTileBmin[1] << ", " << m_lastBuiltTileBmin[2] << " | BoundsMax: " << m_lastBuiltTileBmax[0] << ", " << m_lastBuiltTileBmax[1] << ", " << m_lastBuiltTileBmax[2] << std::endl;
 			unsigned char* data = buildTileMesh(x, y, m_lastBuiltTileBmin, m_lastBuiltTileBmax, dataSize);
 			if (data)
 			{

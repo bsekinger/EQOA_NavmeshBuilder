@@ -637,6 +637,8 @@ static const unsigned char RC_NULL_AREA = 0;
 /// recognized by some steps in the build process. 
 static const unsigned char RC_WALKABLE_AREA = 63;
 
+
+
 /// The value returned by #rcGetCon if the specified direction is not connected
 /// to another span. (Has no neighbor.)
 static const int RC_NOT_CONNECTED = 0x3f;

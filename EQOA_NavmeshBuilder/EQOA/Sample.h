@@ -43,20 +43,18 @@ enum SampleToolType
 enum SamplePolyAreas
 {
 	SAMPLE_POLYAREA_GROUND,
-	SAMPLE_POLYAREA_WATER,
-	SAMPLE_POLYAREA_ROAD,
-	SAMPLE_POLYAREA_DOOR,
-	SAMPLE_POLYAREA_GRASS,
-	SAMPLE_POLYAREA_JUMP
+	SAMPLE_POLYAREA_WATER,	
+	SAMPLE_POLYAREA_MUD,
+	SAMPLE_POLYAREA_LAVA
 };
 enum SamplePolyFlags
 {
-	SAMPLE_POLYFLAGS_WALK		= 0x01,		// Ability to walk (ground, grass, road)
-	SAMPLE_POLYFLAGS_SWIM		= 0x02,		// Ability to swim (water).
-	SAMPLE_POLYFLAGS_DOOR		= 0x04,		// Ability to move through doors.
-	SAMPLE_POLYFLAGS_JUMP		= 0x08,		// Ability to jump.
-	SAMPLE_POLYFLAGS_DISABLED	= 0x10,		// Disabled polygon
-	SAMPLE_POLYFLAGS_ALL		= 0xffff	// All abilities.
+	SAMPLE_POLYFLAGS_WALK = 0x01,  // Normal ground
+	SAMPLE_POLYFLAGS_SWIM = 0x02,  // Generic swim, optional
+	SAMPLE_POLYFLAGS_WATER = 0x04,  // Swim: low cost
+	SAMPLE_POLYFLAGS_MUD = 0x08,  // Swim: medium cost
+	SAMPLE_POLYFLAGS_LAVA = 0x10,  // Swim: high cost
+	SAMPLE_POLYFLAGS_ALL = 0xffff
 };
 
 //class SampleDebugDraw : public DebugDrawGL

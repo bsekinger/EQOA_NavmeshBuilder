@@ -72,9 +72,6 @@
     <ClCompile Include="Detour\Source\DetourNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EQOA_TileMesh.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DebugUtils\Source\DebugDraw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -111,19 +108,22 @@
     <ClCompile Include="DetourCrowd\Source\DetourProximityGrid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InputGeom.cpp">
+    <ClCompile Include="EQOA\ChunkyTriMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sample.cpp">
+    <ClCompile Include="EQOA\EQOA_TileMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ChunkyTriMesh.cpp">
+    <ClCompile Include="EQOA\InputGeom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MeshLoaderObj.cpp">
+    <ClCompile Include="EQOA\MeshLoaderObj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SampleInterfaces.cpp">
+    <ClCompile Include="EQOA\Sample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EQOA\SampleInterfaces.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -164,9 +164,6 @@
     <ClInclude Include="Detour\Include\DetourStatus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EQOA_TileMesh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DebugUtils\Include\RecastDump.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -203,19 +200,28 @@
     <ClInclude Include="DetourCrowd\Include\DetourProximityGrid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InputGeom.h">
+    <ClInclude Include="EQOA\ChunkyTriMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sample.h">
+    <ClInclude Include="EQOA_NavmeshBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ChunkyTriMesh.h">
+    <ClInclude Include="EQOA\InputGeom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MeshLoaderObj.h">
+    <ClInclude Include="EQOA\MeshLoaderObj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SampleInterfaces.h">
+    <ClInclude Include="EQOA\EQOA_TileMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EQOA\Sample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EQOA\SampleInterfaces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
