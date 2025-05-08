@@ -5,10 +5,10 @@
 class Settings
 {
 public: 
-    std::string Path = "C:\\EQOA\\RatheMtns_FixOrigin\\";
+    std::string Path = "C:\\EQOA\\Tunaria_FixOrigin\\";
     std::string meshFile;
-    int minFile = 0;
-    int maxFile = 19;
+    int minFile = 84;
+    int maxFile = 84;
 
     // settings changes to fix small ramp up towers to connect to the main mesh (Freeport guard towers)
 	float cellSize = 0.25f;             // 0.25f;

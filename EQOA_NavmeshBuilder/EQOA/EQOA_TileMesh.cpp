@@ -208,7 +208,7 @@ void EQOA_TileMesh::buildAllTiles()
 			m_lastBuiltTileBmax[2] = bmin[2] + (y+1)*tcs;
 			
 			int dataSize = 0;
-            //std::cout << "Building Tile: " << x << ", " << y << " | BoundsMin: " << m_lastBuiltTileBmin[0] << ", " << m_lastBuiltTileBmin[1] << ", " << m_lastBuiltTileBmin[2] << " | BoundsMax: " << m_lastBuiltTileBmax[0] << ", " << m_lastBuiltTileBmax[1] << ", " << m_lastBuiltTileBmax[2] << std::endl;
+            std::cout << "Building Tile: " << x << ", " << y << " | BoundsMin: " << m_lastBuiltTileBmin[0] << ", " << m_lastBuiltTileBmin[1] << ", " << m_lastBuiltTileBmin[2] << " | BoundsMax: " << m_lastBuiltTileBmax[0] << ", " << m_lastBuiltTileBmax[1] << ", " << m_lastBuiltTileBmax[2] << std::endl;
 			unsigned char* data = buildTileMesh(x, y, m_lastBuiltTileBmin, m_lastBuiltTileBmax, dataSize);
 			if (data)
 			{
@@ -538,20 +538,14 @@ unsigned char* EQOA_TileMesh::buildTileMesh(const int tx, const int ty, const fl
 			if (m_pmesh->areas[i] == RC_WALKABLE_AREA)
 				m_pmesh->areas[i] = SAMPLE_POLYAREA_GROUND;
 			
-			if (m_pmesh->areas[i] == SAMPLE_POLYAREA_GROUND ||
-				m_pmesh->areas[i] == SAMPLE_POLYAREA_GRASS ||
-				m_pmesh->areas[i] == SAMPLE_POLYAREA_ROAD)
+			if (m_pmesh->areas[i] == SAMPLE_POLYAREA_GROUND)
 			{
 				m_pmesh->flags[i] = SAMPLE_POLYFLAGS_WALK;
 			}
 			else if (m_pmesh->areas[i] == SAMPLE_POLYAREA_WATER)
 			{
-				m_pmesh->flags[i] = SAMPLE_POLYFLAGS_SWIM;
-			}
-			else if (m_pmesh->areas[i] == SAMPLE_POLYAREA_DOOR)
-			{
-				m_pmesh->flags[i] = SAMPLE_POLYFLAGS_WALK | SAMPLE_POLYFLAGS_DOOR;
-			}
+				m_pmesh->flags[i] = SAMPLE_POLYFLAGS_WATER;
+			}			
 		}
 		
 		dtNavMeshCreateParams params;
